@@ -56,7 +56,7 @@ def export_features(data_path, output_path, model_name = 'transformer_maestro_te
     os.makedirs('./tmp_export', exist_ok=True)
 
     #model import
-    model = torch.load('./versions/'+ model_name +'./model.pt', weights_only=False, map_location=device) #model class must be imported
+    model = torch.load('./versions/'+ model_name +'/model.pt', weights_only=False, map_location=device) #model class must be imported
     model.device = device
     info = torch.load('./versions/' + model_name + '/info.pt', map_location=device)
     model_type = info['model_type']
